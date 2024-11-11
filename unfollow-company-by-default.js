@@ -24,11 +24,10 @@
         }
     }
 
-    // Observe the document body for dynamic changes (e.g., new elements added)
+    // Observe the document body for dynamic changes
     const observer = new MutationObserver((mutations) => {
         for (let mutation of mutations) {
             if (mutation.addedNodes.length > 0) {
-                // Try to uncheck the checkbox whenever new nodes are added
                 uncheckFollowCompanyCheckbox();
             }
         }
